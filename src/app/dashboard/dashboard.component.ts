@@ -88,11 +88,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
    */
   public ngOnInit() {
     this.token = localStorage.getItem('token');
-      if (this.token == null){
-        this.router.navigate(['../pages/login'])
-      }
-
-
+    if (this.token == null){
+      this.router.navigate(['../pages/login'])
+    }
     this.loadUsers();
     this.loadAuthors();
     this.loadBooks();
